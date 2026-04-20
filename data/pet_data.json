@@ -1,0 +1,31 @@
+{
+  "pets": [
+    {
+      "id": 1001,
+      "name": "Buddy",
+      "category": {"id": 1, "name": "Dogs"},
+      "photoUrls": ["https://example.com/buddy.jpg"],
+      "tags": [{"id": 1, "name": "friendly"}],
+      "status": "available"
+    },
+    {
+      "id": 1002,
+      "name": "Whiskers",
+      "category": {"id": 2, "name": "Cats"},
+      "photoUrls": ["https://example.com/whiskers.jpg"],
+      "tags": [{"id": 2, "name": "vaccinated"}],
+      "status": "pending"
+    },
+    {
+      "id": 1003,
+      "name": "Charlie",
+      "category": {"id": 1, "name": "Dogs"},
+      "photoUrls": ["https://example.com/charlie.jpg", "https://example.com/charlie2.jpg"],
+      "tags": [
+        {"id": 1, "name": "friendly"},
+        {"id": 3, "name": "purebred"}
+      ],
+      "status": "sold"
+    }
+  ]
+}

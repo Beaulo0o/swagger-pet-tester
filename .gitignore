@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# Poetry
+poetry.lock
+poetry.toml
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Logs
+logs/
+*.log
+pytest.log
+
+# Reports
+reports/
+allure-results/
+allure-report/
+*.html
+*.xml
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+.settings/
+*.sublime-*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Config files with secrets
+config/local_settings.py
+config/.env
+
+# Test data
+data/temp/
+*.tmp
+
+# Cache
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+
+# Uploads
+uploads/
+temp_uploads/
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Project specific
+*.pid
+*.seed
+*.pid.lock
