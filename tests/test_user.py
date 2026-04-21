@@ -31,7 +31,6 @@ class TestCreateUser:
         """Негативный тест: создание дубликата"""
         random_user_data["username"] = created_user.username
         response = user_api.create_user(random_user_data)
-        # API должен вернуть ошибку, но может и 200 с перезаписью
         assert response.status_code in [200, 409, 500]
 
     @allure.title("Создание нескольких пользователей списком")
@@ -133,7 +132,6 @@ class TestLoginLogout:
     def test_login_success(self, user_api, created_user):
         """Позитивный тест: логин пользователя"""
         with allure.step(f"Логинимся как {created_user.username}"):
-            # В Petstore пароль не проверяется строго, но мы передаём то, что создали
             response = user_api.login(created_user.username, "password123")
 
         with allure.step("Проверяем статус код 200"):
