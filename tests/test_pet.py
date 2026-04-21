@@ -89,7 +89,6 @@ class TestDeletePet:
     @allure.title("Удаление несуществующего питомца")
     def test_delete_pet_not_found(self, pet_api):
         response = pet_api.delete_pet(999999999)
-        # Petstore v3 возвращает 200 даже при удалении несуществующего
         assert response.status_code == 200
 
 
