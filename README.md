@@ -1,17 +1,30 @@
 # 🐕 Swagger Pet Tester
 
-Автоматизация проверок REST API сервиса Petstore Swagger для тренировки навыков AQA.
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Pytest](https://img.shields.io/badge/Pytest-8.0-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)](https://docs.pytest.org/)
+[![Requests](https://img.shields.io/badge/Requests-2.31-20232A?style=for-the-badge&logo=python&logoColor=white)](https://requests.readthedocs.io/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/features/actions)
+
+[ О проекте](#-о-проекте) •
+[ Цели](#-цели-проекта) •
+[ Быстрый старт](#-быстрый-старт) •
+[ Тесты](#-тестовые-сценарии) •
+[ Стек](#-стек-технологий) •
+[ Структура](#-структура-проекта) •
+[ CI/CD](#-cicd) •
+[ Проблемы](#-известные-проблемы)
 
 ---
 
-## 📋 О проекте
+##  О проекте
 
 Проект представляет собой набор автотестов для API Petstore, написанных на Python с использованием современных инструментов тестирования.  
 Тесты запускаются на локальном Docker-контейнере с Petstore API (v3).
 
 ---
 
-## 🎯 Цели проекта
+##  Цели проекта
 
 - Отработка подходов к автоматизации API-тестирования
 - Практика работы с REST API (Petstore Swagger)
@@ -20,11 +33,11 @@
 
 ---
 
-## 🛠 Стек технологий
+##  Стек технологий
 
 | Компонент           | Технология                          |
 |---------------------|-------------------------------------|
-| Язык                | Python 3.9+                         |
+| Язык                | Python 3.12                        |
 | Тестовый фреймворк  | Pytest 8.0                          |
 | HTTP-клиент         | Requests 2.31                       |
 | Генерация данных    | Faker 22.0                          |
@@ -36,7 +49,7 @@
 
 ---
 
-## 📁 Структура проекта
+## Структура проекта
 
  ```text
 swagger-pet-tester/
@@ -76,7 +89,7 @@ swagger-pet-tester/
 
 ---
 
-## 🚀 Быстрый старт
+##  Быстрый старт
 
  1. Клонирование репозитория
 
@@ -133,7 +146,7 @@ make test-smoke
 
 ---
 
-## 📊 Тестовые сценарии
+## Тестовые сценарии
 
  Pet API
 
@@ -156,7 +169,7 @@ make test-smoke
 
 ---
 
-## 🔧 Команды Makefile
+##  Команды Makefile
 
 | Команда               | Описание                          |
 |-----------------------|-----------------------------------|
@@ -173,7 +186,7 @@ make test-smoke
 
 ---
 
-## 📈 CI/CD
+##  CI/CD
 
 Проект настроен на автоматический запуск тестов через GitHub Actions:
 
@@ -183,7 +196,7 @@ make test-smoke
 
 Что происходит в CI:
 
-1. Установка Python (3.9, 3.10, 3.11)
+1. Установка Python (3.12)
 2. Установка зависимостей
 3. Линтинг (flake8)
 4. Проверка форматирования (black)
@@ -192,7 +205,7 @@ make test-smoke
 
 ---
 
-## ⚠️ Известные проблемы
+##  Известные проблемы
 
 - **User API** в Docker-образе `swaggerapi/petstore3:latest` возвращает 500 ошибку. Тесты для User эндпоинтов временно пропущены.
 - **Store API** создаёт заказы даже с несуществующим `petId` (особенность API, не ошибка тестов).
@@ -200,7 +213,7 @@ make test-smoke
 
 ---
 
-## 📝 Пример использования
+##  Пример использования
 
  ```python
 from api import APIClient, PetAPI
@@ -220,28 +233,6 @@ pet_api.delete_pet(pet.id)
 client.close()
  ```
 
----
 
-## 🤝 Вклад в проект
-
-1. Форкни репозиторий
-2. Создай ветку для фичи (`git checkout -b feature/new-test`)
-3. Зафиксируй изменения (`git commit -m 'Add new test'`)
-4. Запушь ветку (`git push origin feature/new-test`)
-5. Открой Pull Request
-
----
-
-## 📄 Лицензия
-
-MIT License
-
----
-
-## 📧 Контакты
-
-По вопросам сотрудничества: your-email@example.com
-
----
 
 ⭐️ Поставь звёздочку, если проект оказался полезным!
