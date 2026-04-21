@@ -114,7 +114,5 @@ class TestInventory:
             inventory = response.json()
             # Должны быть ключи со статусами
             assert isinstance(inventory, dict)
-            # Ожидаем хотя бы один из статусов
-            # Petstore v3 возвращает другой формат инвентаря
             assert isinstance(inventory, dict)
             assert len(inventory) >= 0  # Просто проверяем, что словарь не пустой
