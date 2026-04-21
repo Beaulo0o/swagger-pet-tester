@@ -232,7 +232,3 @@ print(f"Создан питомец: {pet.name} (ID: {pet.id})")
 pet_api.delete_pet(pet.id)
 client.close()
  ```
-
-
-
-⭐️ Поставь звёздочку, если проект оказался полезным!
