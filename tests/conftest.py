@@ -83,7 +83,6 @@ def created_pet(pet_api: PetAPI, random_pet_data: Dict[str, Any]) -> Generator[P
 
     # Удаляем после теста
     delete_response = pet_api.delete_pet(pet.id)
-    # 200 - успешно, 404 - уже удалён (тоже норм)
     assert delete_response.status_code in [200, 404], f"Failed to delete pet {pet.id}"
 
 
@@ -141,7 +140,6 @@ def auth_headers() -> Dict[str, str]:
     """
     Заголовки для авторизации (если понадобится API ключ)
     """
-    # В Petstore API ключ не обязателен, но можно добавить
     return {
         "api_key": "special-key"  # Тестовый ключ из документации
     }
