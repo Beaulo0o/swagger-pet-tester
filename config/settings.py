@@ -4,14 +4,12 @@
 import os
 from dotenv import load_dotenv
 
-# Загружаем переменные из .env файла (если есть)
 load_dotenv()
 
 
 class Config:
     """Основные настройки"""
 
-    # Базовый URL Petstore API
     BASE_URL = os.getenv("BASE_URL", "https://petstore.swagger.io/v2")
 
     # Таймауты (в секундах)
@@ -29,5 +27,4 @@ class Config:
     LOG_RESPONSES = os.getenv("LOG_RESPONSES", "True").lower() == "true"
 
 
-# Создаём экземпляр конфига для импорта
 config = Config()
